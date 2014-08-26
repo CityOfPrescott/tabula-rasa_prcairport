@@ -1,0 +1,109 @@
+/******************************************************************
+Site Name: 
+Author:  
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so LESS can understand the variables.
+*/
+
+/* import mixins */
+@import "_mixins.less";
+
+@import "_481up.less";
+
+/* import grid */
+@import "_grid.less";
+
+@import "_825up.less";
+@import "_1030up.less";
+
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+
+
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/**  IE8 Fixes  **/
+.lt-ie8, .lt-ie9 { 
+	.home .site-main {
+		background: url(../images/gradient-home.png) @white repeat-x;
+	}
+	.site-main {
+		background: url(../images/gradient-main.png) @white repeat-x;
+	}
+	.recent_n_story h2, .widget-area h3 {
+		background: url(../images/gradient-h2.png) @white no-repeat;
+	}
+	.recent .entry-thumbnail {
+		width: 150px;
+		height: 150px;
+	}
+	.spotlight {
+		width: 22.5%;
+	}
+	.cessna {
+		display: none;
+	}
+}
+
+/**  IE7 Fixes  **/
+.lt-ie8 {
+	.site-branding {
+		height: 80px;
+	}
+	.nav-menu li {
+		float: left;
+		
+		.sub-menu li {
+			float: none;
+			width: 200px;
+		}
+	}
+	.locations {
+		width: 64%;
+	}
+	.featured {
+		width: 30%; 
+	}
+	.widget-area {
+		width: 30%;
+	}
+	.aside2 {
+		display: none;
+	}	
+	.inner-footer .nav-menu li .sub-menu li {
+		width: 135px;
+	}
+	.page, .archive {
+		.entry-header, .page-header {
+			position: static;
+		}
+		.page-banner {
+			display: none;
+		}
+		.entry-title {
+			position: static;
+		}
+		.entry-content {
+			margin-top: 25px;
+		}
+	}
+}
