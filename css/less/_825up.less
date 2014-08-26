@@ -244,53 +244,58 @@ header#masthead .site-header
 	.height(100px);
 	.padding(10px;);
 	text-align: left;
+	position: relative;
 	a {}
-	.site-title, .site-description {
-		margin: 0;
-		padding: 0;
-		float: left;
-		clear: none;
-		.width(500px);
-		text-align: center;
-		background: none;
-	}
-	.site-title {	
-		.margin-top(10px);
-		color: #222;
-		.font-size(24px);
-		font-family: "Old Standard TT";
-		font-weight: 700;
-		text-transform: uppercase;		
-		.padding-bottom(10px);
-		
-		a {
-			color: #222;
+	.site-info {
+		.column(8);
+		.first;	
+		.site-title, .site-description {
+			margin: 0;
+			padding: 0;
+			float: left;
+			clear: none;
+			.width(500px);
+			text-align: center;
+			background: none;
 		}
+		.site-title {	
+			.margin-top(10px);
+			color: #222;
+			.font-size(24px);
+			font-family: "Old Standard TT";
+			font-weight: 700;
+			text-transform: uppercase;		
+			.padding-bottom(10px);
 			
-	}
-	.site-description {	
-		display: block;
-		.margin-top(-10px);
-		.font-size(24px);
-		color: #c72e2a;
-		font-family: "Old Standard TT";
-		font-weight: 700;
-		
-		a {
+			a {
+				color: #222;
+			}
+				
+		}
+		.site-description {	
+			display: block;
+			.margin-top(-10px);
+			.font-size(24px);
 			color: #c72e2a;
-		}		
+			font-family: "Old Standard TT";
+			font-weight: 700;
+			
+			a {
+				color: #c72e2a;
+			}		
+		}
 	}
+	.logo {
+		float: right;
+		.column(4);
+		.last;
+		
+		img {
+			.max-width(225px);
+		}
+	}
+}
 
-	.header-image {}
-}
-.logo {
-	display: block;
-	float: left;
-	
-	img {
-		.max-width(225px);
-	}
-}
 
 /** Navigation
 -------------------------------------------------------------- */
@@ -327,7 +332,7 @@ header#masthead .site-header
 	ul.nav-menu{
 		.wrap;
 		display: inline-block !important;
-		text-align: left;
+		text-align: center;
 		width: 100%;		
 		margin: 0;
 		text-indent: 0;

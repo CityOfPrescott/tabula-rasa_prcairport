@@ -128,18 +128,36 @@ you can add resource intensive styles.
 }
 @media only screen and (min-width: 950px) {
 	@import "_grid.less";
-	
-	.cessna {
-		transition-property: right;
+	ul.nav-menu {
+		text-align: right;
+	}	
+	.site-branding .site-info {
+		display: inline;
+		float: left;
+		width: 50%;
+		margin: 0 1%;
+		.margin-left(240px);
+	}	
+	.site-branding .logo { 
+		display: inline;
+		float: left;
+		width: 20%; 
+		margin: 0 1%;
+		margin-right: 0;
+	}
+	.cessna {	
+		transition-property: left;
 		background: url(../images/cessna182_150.png) no-repeat;
 		position: absolute;
-		bottom: 0;
-		right: -90px;
+		bottom: -40px;
+		left: -90px;
 		height: 150px;
 		width: 350px;	
 		&:hover {
-			right: -800px;
+			/*
+			left: -800px;
 			transition-duration: 5s;
+			*/
 			/*
 			-webkit-animation:myfirst 5s; 
 			-moz-animation:myfirst 5s; 

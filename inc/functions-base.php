@@ -217,7 +217,7 @@ function tr_main_nav() {
 			'after' => '',                                  // after the menu
 			'link_before' => '',                            // before each link
 			'link_after' => '',                             // after each link
-			'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<div class="cessna"></div></ul>',
+			'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 			'depth' => 0,                                   // limit the depth of the nav
     	'fallback_cb' => 'tr_main_nav_fallback'      // fallback function
 	));

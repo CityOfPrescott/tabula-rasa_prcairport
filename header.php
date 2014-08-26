@@ -47,12 +47,16 @@
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="inner-header">
+		
 			<div class="site-branding">
-				<h1 class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Prescott Municipal Airport" /></a></h1>
-				<h2 class="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h2>
-				<h2 class="site-description"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'description' ); ?></a></h2>
-			</div>
-
+				<div class="cessna"></div>
+				<div class="site-info">
+					<h1 class="site-title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'description' ); ?></a></h2>				
+				</div>
+				<div class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Prescott Municipal Airport" /></a></div>
+			</div>	
+			
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<div class="menu-wrapper">
 					<h2 class="menu-title"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h2>
@@ -61,6 +65,8 @@
 				</div>
 				<?php tr_main_nav(); ?>
 			</nav><!-- #site-navigation -->
+
+		
 
 			<?php $header_image = get_header_image();
 			if ( ! empty( $header_image ) ) : ?>
