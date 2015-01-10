@@ -29,6 +29,9 @@
 				</div><!-- .site-info -->
 			</div>
 		</div>
+		<div class="tl-footer">
+			<a href="http://www.third-law.com/">Prescott Web Design by Third Law</a>
+		</div>		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
